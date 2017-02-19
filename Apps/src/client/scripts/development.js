@@ -8,5 +8,7 @@ require('apps/index.scss');
 require('javascripts/app');
 require('apps');
 
+
+require('javascripts/vendor/waypoints.js');
 require('javascripts/vendor/bootstrap.js');
 require('javascripts/vendor/clusterize.js');

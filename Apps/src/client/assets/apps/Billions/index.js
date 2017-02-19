@@ -4,6 +4,9 @@ import $ from 'jquery';
 
 (function () {
 	console.log('BILLIONS is running');
+
+	if($('.Billions').length < 1) { return; }
+
 	function numberWithCommas(x) {
 	    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	}
@@ -91,6 +94,21 @@ import $ from 'jquery';
 		  scrollId: 'scrollArea',
 		  contentId: 'contentArea',
 		  rows_in_block: 32
+		});
+
+
+		//waypoint
+		var waypoint = new Waypoint({
+		  element: document.getElementById('Billions'),
+		  handler: function(direction) {
+		  	console.log('Hit Waypoint');
+		  	console.log(direction);
+		  	if(direction === 'down') {
+			  	$('html').addClass('fixed');
+		  	} else {
+		  		$('html').removeClass('fixed');
+		  	}
+		  }
 		});
 
 
@@ -185,7 +203,7 @@ import $ from 'jquery';
 		//loop over data and update for amount
 		var numberOfRows = amountSpent / 100000;
 
-		for(x = 0; x< numberOfRows + offset; x++) {
+		for(var x = 0; x< numberOfRows + offset; x++) {
 			for(var i = 0; i < dataArray[x].length; i++) {
 				dataArray[x][i] = true;
 			}
