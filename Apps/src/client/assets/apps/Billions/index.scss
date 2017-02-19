@@ -1,0 +1,331 @@
+// html{
+// 	overflow: hidden;
+// }
+
+/* max-height - the only parameter in this file that needs to be edited.
+ * Change it to suit your needs. The rest is recommended to leave as is.
+ */
+.clusterize-scroll{
+  max-height: 93vh;
+  overflow: auto;
+  width: 100%;
+}
+
+/**
+ * Avoid vertical margins for extra tags
+ * Necessary for correct calculations when rows have nonzero vertical margins
+ */
+.clusterize-extra-row{
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* By default extra tag .clusterize-keep-parity added to keep parity of rows.
+ * Useful when used :nth-child(even/odd)
+ */
+.clusterize-extra-row.clusterize-keep-parity{
+  display: none;
+}
+
+/* During initialization clusterize adds tabindex to force the browser to keep focus
+ * on the scrolling list, see issue #11
+ * Outline removes default browser's borders for focused elements.
+ */
+.clusterize-content{
+    outline: 0;
+}
+
+/* Centering message that appears when no data provided
+ */
+.clusterize-no-data td{
+  text-align: center;
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.clusterize-scroll {
+	max-width: 100%;
+	margin: 0 auto;
+	margin-top: 10px;
+	max-height: 100vh;
+
+}
+
+#contentArea {
+	max-width: 640px;
+	/*margin: 0px auto;*/
+	margin-left: 50%;
+}
+
+.main-details {
+	max-width: 50%;
+	background: rgba(38, 41, 49, 0.78);
+	padding: 20px;
+	position: fixed;
+	right: 40px;
+	z-index: 999;
+	bottom: 0;
+	text-align: center;
+}
+
+
+#amount-left {
+	font-weight: 100;
+}
+
+
+.amount-left-block {
+	height: 200px;
+	width: 100px;
+	margin: 0 auto;
+	border: 4px solid #3e8f3e;
+	vertical-align: top;
+	position: relative;
+}
+
+.amount-left-block .left {
+	height: 100%;
+	background-image: linear-gradient(to bottom,#5cb85c 0,#419641 100%);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.amount-left-block .pointer {
+	position: absolute;
+	right: -30px;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 5px;
+	background: white;
+	z-index: 99;
+}
+
+
+
+
+
+
+
+
+/*//nav*/
+
+.navbar-static-top, .navbar-fixed-top, .navbar-fixed-bottom {
+	background-color: hsla(223, 12%, 11%, 1);
+	border: 0;
+	background-image: none;
+}
+
+.container>.navbar-header,
+.navbar-inverse .navbar-brand {
+	color: #fff;
+	font-weight: 100;
+	font-size: 120%;
+}
+
+
+
+
+.products {
+	position: fixed;
+	top: 0;
+	left: 0;
+	max-width: 47%;
+	width: 100%;
+	margin: 0 40px;
+	margin-top: 80px;
+	padding-right: 40px;
+}
+
+.products li {
+	/*padding: 60px 80px;*/
+/*    border-bottom: 1px solid #181a1f;
+    border-left: 1px solid #181a1f;
+    border-right: 1px solid #181a1f;
+
+
+
+    box-shadow: inset -1px 1px 2px rgb(24, 26, 31);
+    margin-bottom: 40px;*/
+
+    box-shadow: 0 0 2px 2px rgba(24, 26, 31, 0.5);
+    margin: 10px;
+    margin-bottom: 40px;
+}
+
+.products img {
+	width: 100%;
+	height: auto;
+	display: block;
+	/*max-height: 100px*/
+	/*max-width: 100px;*/
+	/*width: 100px;*/
+	/*height: 100px;*/
+}
+
+.products .product__price {
+	font-size: 120%;
+	color: white;
+	font-weight: 700;
+	float: left;
+}
+
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+	border-top-color: #ddd;
+	max-height: 540px;
+	overflow-y: scroll;
+}
+
+.content-block {
+	padding: 60px;
+	padding-top: 20px;
+	padding-bottom: 60px;
+}
+
+.content-block .btn {
+	min-width: 100%;
+	min-height: 40px;
+}
+
+.content-block .link-website {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	display: block;
+	color: white;
+	float: right;
+}
+
+
+
+
+/*tabs*/
+.nav-tabs {
+	display: block;
+	position: fixed;
+	left: 40px;
+	z-index: 99999;
+	top: 20px;
+}
+    
+
+
+/* ==========================================================================
+   Accordion
+   ========================================================================== */
+.products .panel-body {
+	color: #fff;
+	padding: 0;
+}
+
+.products .panel-body ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.products .panel-collapse {
+	background-color: #262931;
+	color: #fff;
+}
+
+.panel-group .panel {
+	border: 0;
+}
+
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+	border: 0;
+}
+
+.panel-default>.panel-heading {
+	background: #181a1f;
+	background-image: none;
+	color: #fff;
+	padding: 18px;
+}
+
+
+
+
+/* ==========================================================================
+   Stack of money
+   ========================================================================== */
+
+
+.billions,
+.billions .billions__inner {
+	list-style: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+/*.billions__inner li {
+	position: relative;
+	margin: 10em auto 0;
+	width: 20em; height: 20em;
+	background: dimgrey;
+}
+.billions__inner li:before, .billions__inner li:after {
+	position: absolute;
+	transform-origin: bottom right;
+	content: '';
+}
+.billions__inner li:before {
+	top: 0; right: 100%; bottom: 0;
+	width: 4em;
+	background: darkgrey;
+	transform: skewY(45deg);
+}
+.billions__inner li:after {
+	right: 0; bottom: 100%; left: 0;
+	height: 4em;
+	background: silver;
+	transform: skewX(45deg);
+}*/
+
+.billions li {
+	position: relative;
+
+}
+
+
+.billions .billions__inner {
+	display: inline-block;
+	width: 100%;
+}
+
+.billions .billions__inner li {
+	display: inline-block;
+	height: 40px;
+	width: calc(10% - 4px);
+	background-color: #49a049;
+	color: #fff;
+	border: 1px solid green;
+	vertical-align: text-bottom;
+	transition: background-color .25s ease-in-out,border-color .25s ease-in-out;
+}
+
+.billions .billions__inner .label {
+	position: absolute;
+	top: 2px;
+	left: 25px;
+	max-width: 50%;
+	margin: 0 auto;
+	z-index: 99;
+	font-size: 16px;
+	font-weight: 300;
+	color: #fff;
+	z-index: 99;
+	text-align: center;
+	margin-top: 6px;
+}
+
+.billions .billions__inner .spent {
+	background-color: rgba(73, 160, 73, 0.18);
+	border-color: rgba(73, 160, 73, 0.28);
+}
+
