@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{! Document Settings }}
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{! Styles }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/app.css"}}" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=greek" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+  </head>
+  <body class="{{body_class}}">
+    <div id="wrapper">
+      {{> top-navigation}}
+      <div id="ajax-container">
+        {{{body}}}
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="site-title-wrapper">
+          <h1 class="site-title">
+            <a class="js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}">{{@blog.title}}</a>
+          </h1>
+          <a class="button-square button-jump-top js-jump-top" href="#"><i class="fa fa-angle-up"></i></a>
+        </div>
+        <p class="footer-copyright">&copy; {{date format="YYYY"}} / Published with <a href="https://ghost.org">Ghost</a> / <a href="https://github.com/dklisiaris/ghostbot">Ghostbot theme</a> By <a href="http://klisiaris.org">dklisiaris</a></p>
+      </div>
+    </footer>
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+    <script type="text/javascript" src="{{asset "js/vendor.bundle.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/application.js"}}"></script>
+  </body>
+</html>
