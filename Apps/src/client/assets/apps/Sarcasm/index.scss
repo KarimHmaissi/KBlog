@@ -1,0 +1,62 @@
+
+
+.Sarcasm {
+
+	max-width: 540px;
+	margin: 0 auto;
+
+
+	.comment__container {
+		margin-bottom: 30px;
+	}
+
+	.comment__parent {
+		margin-bottom: 15px;
+	}
+
+	.comment__child {
+		margin-left: 50px;
+	}
+
+	.comment__content {
+
+	}
+
+	.comment__content__header {
+	
+		.author,
+		.score {
+			display: inline;
+		}
+
+		.author {
+			margin-right: 30px;
+			
+		}
+
+		.score {
+
+		}
+	}
+
+	.comment__content__body {
+		.content {
+			margin-bottom: 15px;
+		}
+	}
+
+	.comment__content__footer {
+		.link {
+
+		}
+	}
+
+
+	// util
+	.no-style {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+}

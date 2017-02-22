@@ -161,19 +161,19 @@ table {
     max-width: 700px;
 }
 
-#wrapper {
-    height: auto;
-        min-height: 100%;
-    /* This must be the same as the height of the footer */
-    margin-bottom: -265px;
+// #wrapper {
+//     height: auto;
+//         min-height: 100%;
+//     /* This must be the same as the height of the footer */
+//     margin-bottom: -265px;
 
-    &:after {
-        content: "";
-        display: block;
-        /* This must be the same as the height of the footer */
-        height: 265px;
-    }
-}
+//     &:after {
+//         content: "";
+//         display: block;
+//         /* This must be the same as the height of the footer */
+//         height: 265px;
+//     }
+// }
 
 .button {
     background: $secondary;

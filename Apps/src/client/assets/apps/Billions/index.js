@@ -111,6 +111,15 @@ import $ from 'jquery';
 		  }
 		});
 
+		//exit button 
+		$('.exit-button').on('click', function () {
+			$("html, body").animate({ scrollTop: 0 }, "fast");
+		});
+
+		//remove footer 
+		$('footer').remove();
+
+
 
 		$('#scrollArea').on('scroll', function () {
 			var progress = clusterize.getScrollProgress();

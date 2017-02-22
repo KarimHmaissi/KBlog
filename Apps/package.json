@@ -88,6 +88,9 @@
     "classnames": "2.2.5",
     "express": "4.14.0",
     "raven-js": "3.6.1",
+    "react": "15.3.1",
+    "react-dom": "15.3.1",
+    "react-hot-loader": "3.0.0-beta.2",
     "reselect": "2.5.3"
   }
 }
