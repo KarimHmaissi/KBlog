@@ -4,6 +4,7 @@ window.Raven = require('raven-js');
 // Load CSS via Webpack to be able to require Bootstrap, Font Awesome, etc. from npm
 require('styles/bootstrap.css');
 require('styles/styles.scss');
+require('styles/fullscreen.scss');
 require('apps/index.scss');
 
 

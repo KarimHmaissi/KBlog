@@ -1,5 +1,1 @@
-import $ from 'jquery';
-
-const jQuery = $;
-
-console.log('Im running');
+import fullscreen from './fullscreen.js';
