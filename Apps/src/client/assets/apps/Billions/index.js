@@ -257,23 +257,8 @@ import $ from 'jquery';
 
 		}
 
-		
-
-
-
-		
-
-
-
-
-
-
-
 		$('.products li .buy').on('click', function (e) {
 			e.preventDefault();
-
-
-
 
 			//scrollto top of stack
 			var rowHeight = 40;
@@ -284,14 +269,7 @@ import $ from 'jquery';
 		 //    }, 2000);
 
 
-
-
-
-
-
 			var amount =  $(this).parent().parent().attr('data-price');
-
-
 
 			var amountLeftAdjusted = amountLeft - parseInt(amount, 10);
 			// amountLeft -= parseInt(amount, 10);
@@ -321,9 +299,6 @@ import $ from 'jquery';
 			console.log(amountLeftAdjusted);
 
 			var updatedAmount = amountLeftAdjusted / 100000;
-
-
-
 
 			//animate the boxes going white
 			var whiteBlocks = amount / 10000;
@@ -405,15 +380,12 @@ import $ from 'jquery';
 		}
 		// change(index);
 
-		
-
 		updateDataArray(amountToDestroy);
 
 		var newData = getData();
 
 		//then republish data to clusrerize
 		clusterize.update(newData);
-
 
 		var rowHeight = 40;
 		var rowsToScroll = ((amountToDestroy + ( BILLION - amountLeft )) / 100000) * rowHeight; 
@@ -424,10 +396,6 @@ import $ from 'jquery';
 		        scrollTop:  rowsToScroll
 		    }, 2000);
 		// }, 500);
-
-		
-
-
 	}
 
 

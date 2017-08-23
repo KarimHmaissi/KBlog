@@ -99,6 +99,8 @@ class Clusterize extends React.Component {
 	}
 
 	render() {
+		if(!this.props.data) { return null; }
+
 		return {
 			<div className="billion-stack"></div>
 		}
